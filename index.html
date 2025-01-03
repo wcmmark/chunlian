@@ -33,7 +33,7 @@
             }
             .countdown-left h1, .countdown-right h1 {
                 font-size: 2rem;
-        padding: 5px;
+                padding: 5px;
             }
             .my-left{
                 width: 40%;
@@ -42,7 +42,7 @@
                 margin-left: 10px;
             }
         }
-    
+        
         .countdown {
             display: flex;
             justify-content: space-between;
@@ -50,7 +50,7 @@
             padding: 1px;
             text-align: center;
             border-radius: 8px;
-    height: 35%;
+            height: 35%;
             background-color: transparent;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -113,18 +113,18 @@
             border-radius: 5px;
         }
         input, select {
-    box-sizing: border-box;
-    width: 100%;
-}
-.countdown-description {
-    margin-top:12px;
-}
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .countdown-description {
+            margin-top:12px;
+        }
         .gallery {
             display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 5px;
-    margin: 5px;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 5px;
+            margin: 5px;
         }
     
         .gallery img {
@@ -133,55 +133,55 @@
         }
         
         /* 使模态窗口背景半透明 */
-.modal {
-    display: none; /* 默认隐藏 */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-/* 弹窗关闭按钮样式 */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* 模态窗口中显示的图片 */
-.modal-content {
-    max-width: 90%;
-    max-height: 90%;
-}
-/* 弹出框样式 */
-.modal-img {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-img-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 18px;
-}
+        .modal {
+            display: none; /* 默认隐藏 */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* 弹窗关闭按钮样式 */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        /* 模态窗口中显示的图片 */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        /* 弹出框样式 */
+        .modal-img {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .modal-img-content {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          text-align: center;
+          font-size: 18px;
+        }
     </style>
     
 </head>
@@ -201,17 +201,16 @@
                 
             <div class="gallery">
                 <!-- 图片集合 -->
-<img src="https://p11-stone-ui-builder-sign.byteimg.com/tos-cn-i-e1ww11ta6z/picture/1858623821844992_1734235587766907762.png~tplv-e1ww11ta6z-normal.webp?rk3s=daacf5c7&x-expires=1743656508&x-signature=mZ2xUcyXqmYxsQErfDFCJBPw%2FCc%3D" alt="对联样例1" class="thumbnail" onclick="openModal(this)">
-<img src="https://p26-stone-ui-builder-sign.byteimg.com/tos-cn-i-e1ww11ta6z/picture/1858623821844992_1734185693702628649.png~tplv-e1ww11ta6z-normal.webp?rk3s=daacf5c7&x-expires=1743656351&x-signature=%2FHxayreeEyPdIbAQSug2clq9Lk4%3D" alt="对联样例2" class="thumbnail" onclick="openModal(this)">
-<img src="https://p26-stone-ui-builder-sign.byteimg.com/tos-cn-i-e1ww11ta6z/picture/1858623821844992_1734235613806156211.png~tplv-e1ww11ta6z-normal.webp?rk3s=daacf5c7&x-expires=1743656351&x-signature=dQTsDTb%2BWHOPxCjNlcuy6WNm7jI%3D" alt="对联样例3" class="thumbnail" onclick="openModal(this)">
-<img src="https://p26-stone-ui-builder-sign.byteimg.com/tos-cn-i-e1ww11ta6z/picture/1858623821844992_1734185972622403617.png~tplv-e1ww11ta6z-normal.webp?rk3s=daacf5c7&x-expires=1743656351&x-signature=E8ZWpZ1YWzns4DF8OGe73E2hbyw%3D" alt="对联样例4" class="thumbnail" onclick="openModal(this)">
-
-<!-- 模态弹窗 -->
-<div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImage">
-</div>
-
+                <img src="https://p11-stone-ui-builder-sign.byteimg.com/tos-cn-i-e1ww11ta6z/picture/1858623821844992_1734235587766907762.png~tplv-e1ww11ta6z-normal.webp?rk3s=daacf5c7&x-expires=1743656508&x-signature=mZ2xUcyXqmYxsQErfDFCJBPw%2FCc%3D" alt="对联样例1" class="thumbnail" onclick="openModal(this)">
+                <img src="https://p3-official-plugin-sign.byteimg.com/tos-cn-i-5jbd59dj06/c61009d5204b4ce587d994f2f04c2430~tplv-5jbd59dj06-image.png?lk3s=8c875d0b&x-expires=1767420655&x-signature=nflZzC0oSLWHqzujVuxTgINwovs%3D" alt="对联样例2" class="thumbnail" onclick="openModal(this)">
+                <img src="https://p26-stone-ui-builder-sign.byteimg.com/tos-cn-i-e1ww11ta6z/picture/1858623821844992_1734235613806156211.png~tplv-e1ww11ta6z-normal.webp?rk3s=daacf5c7&x-expires=1743656351&x-signature=dQTsDTb%2BWHOPxCjNlcuy6WNm7jI%3D" alt="对联样例3" class="thumbnail" onclick="openModal(this)">
+                <img src="https://p26-stone-ui-builder-sign.byteimg.com/tos-cn-i-e1ww11ta6z/picture/1858623821844992_1734185972622403617.png~tplv-e1ww11ta6z-normal.webp?rk3s=daacf5c7&x-expires=1743656351&x-signature=E8ZWpZ1YWzns4DF8OGe73E2hbyw%3D" alt="对联样例4" class="thumbnail" onclick="openModal(this)">
+                
+                <!-- 模态弹窗 -->
+                <div id="imageModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                </div>
             </div>
             </div>
         </div>
@@ -224,8 +223,8 @@
 
                 <label for="style">请选择风格</label>
                 <select id="style">
-                    <option value="羊毛毡，可爱，治愈，3D" selected>羊毛毡风格</option>
-                    <option value="艺术，水墨">艺术风格</option>
+                    <option value="羊毛毡" selected>羊毛毡风格</option>
+                    <option value="艺术">艺术风格</option>
                 </select>
 
                 <button onclick="generateCouplet()">生成对联</button>
@@ -243,20 +242,20 @@
 
     <script>
         // 打开模态窗口并显示点击的图片
-function openModal(imgElement) {
-    var modal = document.getElementById("imageModal");
-    var modalImg = document.getElementById("modalImage");
-    
-    // 设置模态窗口图片为点击的图片
-    modal.style.display = "flex";
-    modalImg.src = imgElement.src;
-}
-
-// 关闭模态窗口
-function closeModal() {
-    var modal = document.getElementById("imageModal");
-    modal.style.display = "none";
-}
+        function openModal(imgElement) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            
+            // 设置模态窗口图片为点击的图片
+            modal.style.display = "flex";
+            modalImg.src = imgElement.src;
+        }
+        
+        // 关闭模态窗口
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
         function calculateDaysRemaining() {
             // 获取当前年份
             const currentYear = new Date().getFullYear();
@@ -274,69 +273,68 @@ function closeModal() {
             // 将时间差转换为天数
             const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
 
-
             document.getElementById('days-remaining').textContent = `${daysRemaining}`;
         }
 
         function generateCouplet() {
-    // 获取用户输入的姓名和选择的风格
-    const name = document.getElementById('name').value;
-    const style = document.getElementById('style').value;
-
-    if (!name || !style) {
-        alert('请输入姓名并选择风格！');
-        return;
-    }
-
-    // 显示“正在生成”提示框
-    document.getElementById('loadingModal').style.display = 'flex';
-
-    const url = 'https://api.coze.cn/v1/workflow/run';
-    const token = 'pat_cLahHo7AQpfNQaG2zcut8xPGVQRYJYdZbP2pGIBsw9gFXNj92Jg6VQfOiizbjwWO';
-
-    const payload = {
-        parameters: {
-            username: name,
-            style: style
-        },
-        workflow_id: "7455515820271550516"
-    };
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', url, true);
-    xhr.setRequestHeader('Authorization', `Bearer ${token}`);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            // 请求完成，隐藏“正在生成”提示框
-            document.getElementById('loadingModal').style.display = 'none';
-
-            if (xhr.status >= 200 && xhr.status < 300) {
-                try {
-                    const response = JSON.parse(xhr.responseText);
-                    if (response.code === 0 && response.data) {
-                        const parsedData = JSON.parse(response.data); // 解析 `data` 字段中的 JSON 字符串
-                        const imageUrl = parsedData.output; // 获取 `output` 字段
-                        const contentImg = document.getElementById('content_img');
-                        contentImg.src = imageUrl;
+            // 获取用户输入的姓名和选择的风格
+            const name = document.getElementById('name').value;
+            const style = document.getElementById('style').value;
+        
+            if (!name || !style) {
+                alert('请输入姓名并选择风格！');
+                return;
+            }
+        
+            // 显示“正在生成”提示框
+            document.getElementById('loadingModal').style.display = 'flex';
+        
+            const url = 'https://api.coze.cn/v1/workflow/run';
+            const token = 'pat_cLahHo7AQpfNQaG2zcut8xPGVQRYJYdZbP2pGIBsw9gFXNj92Jg6VQfOiizbjwWO';
+        
+            const payload = {
+                parameters: {
+                    username: name,
+                    style: style
+                },
+                workflow_id: "7455515820271550516"
+            };
+        
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Authorization', `Bearer ${token}`);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+        
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    // 请求完成，隐藏“正在生成”提示框
+                    document.getElementById('loadingModal').style.display = 'none';
+        
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        try {
+                            const response = JSON.parse(xhr.responseText);
+                            if (response.code === 0 && response.data) {
+                                const parsedData = JSON.parse(response.data); // 解析 `data` 字段中的 JSON 字符串
+                                const imageUrl = parsedData.output; // 获取 `output` 字段
+                                const contentImg = document.getElementById('content_img');
+                                contentImg.src = imageUrl;
+                            } else {
+                                console.error('Error in response data:', response);
+                                alert('生成对联失败，请稍后重试！');
+                            }
+                        } catch (error) {
+                            console.error('Error parsing response:', error);
+                            alert('生成对联失败，请稍后重试！');
+                        }
                     } else {
-                        console.error('Error in response data:', response);
+                        console.error('Request failed:', xhr.status, xhr.statusText);
                         alert('生成对联失败，请稍后重试！');
                     }
-                } catch (error) {
-                    console.error('Error parsing response:', error);
-                    alert('生成对联失败，请稍后重试！');
                 }
-            } else {
-                console.error('Request failed:', xhr.status, xhr.statusText);
-                alert('生成对联失败，请稍后重试！');
-            }
+            };
+        
+            xhr.send(JSON.stringify(payload));
         }
-    };
-
-    xhr.send(JSON.stringify(payload));
-}
         // 初始化
         calculateDaysRemaining();
     </script>
